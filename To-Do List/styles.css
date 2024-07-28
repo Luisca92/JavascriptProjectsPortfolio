@@ -1,0 +1,104 @@
+/* Here, we’re:
+
+    Setting a universal font for a clean and consistent look.
+    Using Flexbox to center the To-Do List app vertically and horizontally.
+    Applying a full viewport height for the body for a full-screen effect.
+    Adding a gradient background for a modern and vibrant appearance.
+    Defining the style for our main app container with padding, border-radius, and a box-shadow for a polished look. */
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #6DD5FA, #FF758C);
+    color: #333;
+}
+
+#todo-app {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Next, let's style the input field and the submission button: */
+
+/* In this section, we’re:
+
+    Styling the input field with padding, border, and border-radius for a clean look.
+    Giving the button a distinct color, making it stand out, and ensuring it's clickable.
+    Adding a hover effect to the button for better user interaction.
+ */
+
+#todo-form input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#todo-form button {
+    padding: 10px 20px;
+    background-color: #5F9EA0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#todo-form button:hover {
+    background-color: #4682B4;
+}
+
+/* Now, let's style the list of tasks: 
+
+Here, we’re:
+    Removing the default list styling.
+    Adding background color, margins, and padding for each list item.
+    Using Flexbox to position the content and buttons within each list item. */
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li {
+    background-color: #f9f9f9;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#return-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #FFF;
+    color: #ed80b0;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#return-button:hover {
+    color: #FFF;
+    background-color: #ed80b0;
+}
+

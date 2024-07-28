@@ -1,0 +1,92 @@
+/* In this setup, we are:
+    Setting a universal font for a consistent look.
+    Using Flexbox to center the game board vertically and horizontally.
+    Applying a full viewport height for the body for a full-screen appearance.
+    Adding a gradient background for a modern, appealing look.
+    Defining the layout of the game board using CSS Grid. */
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    color: #333;
+}
+
+#tic-tac-toe-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+/* Here, we are:
+    Giving each cell a solid border and background color.
+    Using Flexbox again to center content within each cell.
+    Increasing the font size for visibility.
+    Changing the cursor to a pointer to indicate interactivity.
+    Adding a hover effect for a responsive feel. */
+
+.cell {
+    background-color: #fff;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px;
+    height: 100px;
+}
+
+.cell:hover {
+    background-color: #e3e3e3;
+}
+
+/* To ensure your game looks good on all devices, consider adding responsive design elements. 
+This can be achieved with media queries in CSS, which allow you to apply different styles based on the device's screen size. */
+
+@media (max-width: 600px) {
+    .cell {
+        width: 60px;
+        height: 60px;
+    }
+  
+    #tic-tac-toe-board {
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+    }
+  }
+
+  .game-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+  }
+
+  #return-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #FFF;
+    color: #ed80b0;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#return-button:hover {
+    color: #FFF;
+    background-color: #ed80b0;
+}
+

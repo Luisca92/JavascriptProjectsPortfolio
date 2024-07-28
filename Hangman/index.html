@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<HTML t="0x31" i ="YA-9517" v = "1.60"> 
+    <head>
+        <title> Hangman (Game)</title>
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+    <body>
+        <button id="return-button" onclick="window.history.back()">Return</button>
+        <div id="home", class="center-content">
+            <div class="title">Hangman</div>
+            <img src="hang.png" alt="Hangman" class="hangman-image">
+            <div class="button anim" onclick="startGame()">Play the game!</div>
+            <div class="instructions">Hangman is a word-guessing game where the player tries to guess 
+                the word selected by the computer. The player starts by selecting a letter, and if it's in the word, 
+                the computer reveals its position. If the letter is not in the word, part of a hangman is drawn. 
+                The game continues until the word is guessed or the hangman is completed.</div>
+        </div>
+        <div id="result" class="h">
+            <div class="title" id="rT"></div>
+            <div class="body" id="rM"></div>
+            <div class="button anim" onclick="startGame()">Try Again?</div>
+        </div>
+        <div id="pGame">
+            <div id="letter"></div>
+            <div id="game">
+                <div class="player">
+                    <div class="playerModel">
+                        <div class="head" data="false" id="g4"></div>
+                        <div class="body" data="false" l="false" r="false" id="g5"></div>
+                        <div class="foot" data="false" l="false" r="false" id="g6"></div>
+                    </div>
+                </div>
+                <div class="stang3" data="false" id="g3"></div>
+                <div class="stang2" data="false" id="g2"></div>
+                <div class="stang" data="false" id="g1"></div>
+                <div class="ground" data="false" id="g0"></div>
+                <div class="hintButton" data="false" id="hintButton" onclick="hint()">How about a hint?</div>
+            </div>
+            <div id="tastatur">
+                <div id="moveKeyboard"><div class="marg"></div></div>
+                <div id="keyboard"></div>
+            </div>
+            <div class="hint" id="hint">
+                <div class="title">Hint<div class="exit" onclick="hintExit()">x</div></div>
+                <div class="body" id="hintText"></div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</HTML>

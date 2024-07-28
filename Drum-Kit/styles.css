@@ -1,0 +1,98 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #222, #555);
+    color: #fff;
+}
+
+#drum-kit {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* In this section, we're:
+
+    Styling each key with borders, padding, and making them clickable.
+    Setting a transition effect for interactive feedback when keys are pressed.
+    Defining an .active class for a visual effect when a key is activated.
+ */
+
+.key {
+    border: 2px solid #fff;
+    border-radius: 5px; 
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    text-transform: uppercase;
+    cursor: pointer; 
+    transition: transform 0.1s ease;
+}
+
+.key.active {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0  0 10px #ffc600;
+    color: #ffc600
+}
+
+/* To enhance user interaction, let's provide visual feedback when keys are pressed: */
+.key:active, .key:focus {
+    outline: none;
+    transform: scale(0.95);
+}
+
+/* This ensures that each key visually responds when interacted with, giving the player immediate feedback. */
+
+/* Adjusting Drum Key Sizes for Responsiveness
+
+First, we need to make sure that the drum keys are comfortably clickable or tappable on all devices. 
+We'll use CSS media queries to adjust the size of the keys based on the screen size: */
+
+/* Base styles for .key */
+.key {
+    width: 100px;
+    height: 100px;
+    /* Other styles remain unchanged. */
+}
+
+/* In this snippet, drum keys are made smaller on screens less than 600px wide, 
+making the drum kit more usable on smaller devices. */
+
+@media (max-width: 600px) {
+    .key {
+        width: 80px;
+        height: 80px;
+        font-size: 14px; /* Adjust font size for smaller screens */    }
+}
+
+
+#return-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #FFF;
+    color: #ed80b0;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#return-button:hover {
+    color: #FFF;
+    background-color: #ed80b0;
+}
+

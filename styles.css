@@ -1,0 +1,66 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #f39eb6, #fadec5);
+    position: relative; /* Set position relative for positioning the image */
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background-color: #62cce6; /* Set background color to white */
+    padding: 20px; /* Add padding inside the container */
+    border-radius: 5px; /* Add border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Adjust the gap between buttons */
+}
+
+h1 {
+    font-size: 2em;
+    font-family: monospace;
+    margin-bottom: 20px;
+    color: white;
+    -webkit-text-stroke: 1.5px black; /* Add a thick black outline */
+}
+
+button {
+    padding: 10px 20px;
+    font-family:monospace;
+    font-size: 1.2em;
+    background-color: #FFF;
+    color: #ed80b0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    color: #FFF;
+    background-color: #ed80b0;
+}
+
+.ficus-tree {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 350px; /* Adjust the size of the image as needed */
+    height: auto;
+    z-index: 1; /* Ensure the image is above other content */
+}
+
+@media (max-width: 1000px) {
+    .ficus-tree {
+        display: none;
+    }
+}

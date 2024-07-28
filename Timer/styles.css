@@ -1,0 +1,81 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6dd5ed, #2192b0);
+    color: white
+}
+
+/* Here's what we're doing:
+
+    Setting a universal font for consistency.
+    Using Flexbox to center our timer both vertically and horizontally.
+    Setting the height of the body to the full viewport height (100vh) for a full-screen effect.
+    Adding a cool gradient background for a modern look.
+    Setting the text color to white for contrast. */
+
+
+#countdown {
+    background: rgba(0, 0, 0 0.7);
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#timer {
+    font-size: 3rem;
+    letter-spacing: 3px;
+
+}
+
+.timer-unit{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    display: block;
+}
+
+/* In these styles we're:  */
+/*      Using a semi-transparent background, padding, and rounded corners for a sleek look. */
+/*      Adding a shadow for depth. */
+/*      Setting font size, letter spacing, and typography properties to make the timer readable and stylish */
+
+@media (max-width: 600px) {
+    #timer {
+        font-size: 2rem;
+    }
+    .timer-unit {
+        font-size: 1rem;
+    }
+  }
+
+/* This media query reduces the font size of the timer and its units on screens smaller than 600 pixels wide, 
+making it more mobile-friendly.
+
+And there you go! You've now added style to your timer, making it not just functional but also visually appealing.  */
+
+#return-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #FFF;
+    color: #ed80b0;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#return-button:hover {
+    color: #FFF;
+    background-color: #ed80b0;
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <script src="script.js" charset=utf-8></script>
+</head>
+<header>
+    <h1 class="fw-300 t-ucase">Time For <br><span class="fw-400 t-wide t-big t-ucase">Tetris</span></h1>
+  </header>
+<body>
+    <button id="return-button" onclick="window.history.back()">Return</button>
+    <audio id="gameMusic" src="themeTetris.mp3" loop></audio>
+    <audio id="freezeSound" src="freeze.wav"></audio>
+    <audio id="clearSound" src="clear.wav"></audio>
+    <main class="game-area">
+        <div class="game">
+          <div class="grid"></div>
+        </div>
+        <section>
+          <div class="display">
+            <h1 class="score fw-400 t-ucase">Your Score <br> <span class="score-display t-ucase fw-300">0</span></h1>
+            <div class="previous-shape">
+              <div class="previous-grid"></div>
+            </div>
+            <h2 class="lines-display fw-400 t-ucase">Lines:<span class="lines-score">0</span></h2>
+          </div>
+          <button class="button t-ucase" href="#">Start / Pause</button>
+          <small class='footer t-ucase'>Credits Original Code: Kubowania</small>
+        </section>
+      </main>
+</body>
+</html>

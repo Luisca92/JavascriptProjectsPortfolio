@@ -1,0 +1,87 @@
+#return-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #FFF;
+    color: #ed80b0;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#return-button:hover {
+    color: #FFF;
+    background-color: #ed80b0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: cornflowerblue;
+
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.task-form {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+.task-list {
+    padding: 10px;
+    margin-bottom: 20px; /* Add space between task list and form */
+}
+
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.task button {
+    background-color: white;
+    color: ed80b0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.task button:hover {
+    color: #FFF;
+    background-color: #ed80b0;
+}
+
+.remove-task {
+    background: none;
+    font-size: 0.7rem;
+    color: #ed80b0;
+    cursor: pointer;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
